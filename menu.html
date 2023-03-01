@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1><img src="https://madnews.files.wordpress.com/2017/02/chop.png?w=512" style="width: 200px; height: 200px;"></h1>
+      <ul class="menu-tabs">
+        <li class="active"><a href="#all">All</a></li>
+        <li><a href="#food">Food</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+        <li><a href="#desserts">Desserts</a></li>
+      </ul>
+    </header>
+
+    <header>
+      <div id="cartList">
+        <h3></h3>
+      </div>
+      <button id="showBill">Show Bill</button>
+
+      <script>
+        const menuItems = document.querySelectorAll(".menu-item");
+        const cartCount = document.querySelector("#cartCount");
+        let itemCount = 0;
+        let total = 0;
+
+        menuItems.forEach(function(item) {
+          item.addEventListener("click", function() {
+            itemCount++;
+            total += parseFloat(item.getAttribute("data-price"));
+            counText = itemCount + " items in cart ($" + total + ")";
+            cartCount.textContent = counText;
+          });
+        });
+
+        const showBillButton = document.querySelector("#showBill");
+
+        showBillButton.addEventListener("click", function() {
+          alert(function calculateBill()); //"Total: $" + total);
+        });
+
+      </script>
+    </header>
+
+    <section class="menu-section active" id="all">
+      <h2>Menu</h2>
+      <div class="menu-wrapper">
+        <div class="arrow arrow-left"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-24-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+        <div class="menu-list-wrapper">
+          <ul class="menu-list">
+            <li class="menu-item active" data-price="5.99">
+              <img src="https://th.bing.com/th/id/R.0455d35f0d089df98e9899339525ba16?rik=RMUk6UI0hgWcmA&pid=ImgRaw&r=0" alt="Burger" class="menu-item-img">
+              <h3 class="menu-item-name">Burger</h3>
+              <h4 class="menu-item-price">5.99 </h4>
+              <p class="menu-item-desc">Juicy beef patty, lettuce, tomato, and mayo served on a sesame seed bun.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="arrow arrow-right"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-22-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="food">
+      <h2>Food</h2>
+      <div class="menu-wrapper">
+        <div class="arrow arrow-left"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-24-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+        <div class="menu-list-wrapper">
+          <ul class="menu-list">
+            <li class="menu-item active" data-price="5.99">
+              <img src="https://th.bing.com/th/id/R.0455d35f0d089df98e9899339525ba16?rik=RMUk6UI0hgWcmA&pid=ImgRaw&r=0" alt="Burger" class="menu-item-img">
+              <h3 class="menu-item-name">Burger</h3>
+              <h4 class="menu-item-price">5.99 </h4>
+              <p class="menu-item-desc">Juicy beef patty, lettuce, tomato, and mayo served on a sesame seed bun.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="arrow arrow-right"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-22-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+      </div>
+    </section>
+
+
+    <section class="menu-section" id="drinks">
+      <h2>Drinks</h2>
+      <div class="menu-wrapper">
+        <div class="arrow arrow-left"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-24-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+        <div class="menu-list-wrapper">
+          <ul class="menu-list">
+            <li class="menu-item active" data-price="2.99">
+              <img src="https://th.bing.com/th/id/OIP.O9_wBXv9aMPs-Vge7tSuJQHaEK?pid=ImgDet&rs=1" alt="Coke" class="menu-item-img">
+              <h3 class="menu-item-name">Cold Drinks</h3>
+              <h4 class="menu-item-price">2.99 </h4>
+              <p class="menu-item-desc">Choose from a variety of cold drinks.</p>
+            </li>
+
+          </ul>
+        </div>
+        <div class="arrow arrow-right"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-22-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="desserts">
+      <h2>Desserts</h2>
+      <div class="menu-wrapper">
+        <div class="arrow arrow-left"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-24-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+        <div class="menu-list-wrapper">
+          <ul class="menu-list">
+            <li class="menu-item active" data-price="3.99">
+              <img src="https://th.bing.com/th/id/OIP.uq2FJMjWR9qoa-8f7r9Y8gHaEd?pid=ImgDet&rs=1" alt="Ice Cream" class="menu-item-img">
+              <h3 class="menu-item-name">Ice Cream</h3>
+              <h4 class="menu-item-price">3.99 </h4>
+              <p class="menu-item-desc">A scoop of creamy, delicious ice cream.</p>
+            </li>
+
+          </ul>
+        </div>
+        <div class="arrow arrow-right"><img src="https://cdn0.iconfinder.com/data/icons/common-2/100/icon-22-512.png" alt="Burger" class="arrow-left-img" style="width: 50px; height: 50px;"></div>
+      </div>
+    </section>
+
+
+  </body>
+
+</html>

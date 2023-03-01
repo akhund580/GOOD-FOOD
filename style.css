@@ -1,0 +1,150 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+h1 {
+	margin: 0;
+	font-size: 32px;
+}
+
+.menu-tabs {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-tabs li {
+	margin-right: 20px;
+}
+
+.menu-tabs li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.menu-tabs li.active a {
+	background-color: #fff;
+	color: #333;
+}
+
+.menu-tabs li a:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+.menu-section {
+	display: none;
+	padding: 0 20px;
+  
+  
+}
+
+.menu-section.active {
+	display: block;
+}
+
+.menu-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-item {
+	background-color: #eee;
+	padding: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.menu-item.selected {
+	background-color: #ddd;
+}
+
+#cartList {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.cart {
+	display: flex;
+	align-items: center;
+	background-color: #aba;
+	padding: 10px;
+	border-radius: 5px;
+	margin-right: 20px;
+}
+
+
+#showBill {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #111;
+	color: #AfAf;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.menu-list-wrapper {
+  position: relative;
+}
+
+.menu-list-wrapper:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.menu-item-img {
+  height: 200px;
+}
+.menu-item img {
+  transition: transform 0.2s ease-in-out;
+}
+.active {
+  display: block;
+}
+
+.inactive {
+  display: none;
+}
+
+.arrow-left img {
+  transition: transform 0.2s ease-in-out;
+}
+.arrow-right img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.arrow-left img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.arrow-right img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
